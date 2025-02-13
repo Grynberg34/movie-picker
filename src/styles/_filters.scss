@@ -1,0 +1,44 @@
+@use 'colors';
+
+.filters {
+
+    .filters__box {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 60vh;
+        width: 70%;
+        border: 0.4vw solid colors.$lightPurple;
+
+        .filters__box__select {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 4vh;
+            width: 80%;
+
+            .filters__box__select__icon {
+                display: block;
+                font-size: 2.5vw;
+                color: colors.$lightPurple;
+                cursor: pointer;
+            }
+
+            .icon--right {
+                margin-left: auto;
+            }
+
+            .filters__box__select__title {
+                background-color: colors.$lightPurple;
+                padding: 0.2vw;
+                margin-top: 0;
+                margin-bottom: 0;
+                font-size: 1.5vw;
+                text-align: center;
+                color: colors.$purple;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+}

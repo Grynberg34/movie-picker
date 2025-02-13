@@ -1,0 +1,16 @@
+@use 'colors';
+
+.header {
+    .header__title {
+        font-size: 4vw;
+        text-align: center;
+        font-weight: 700;
+        color: colors.$lightYellow;
+        text-transform: uppercase;
+
+        .header__title--yellow {
+            color: colors.$lightPurple;
+            font-weight: 400;
+        }
+    }
+}

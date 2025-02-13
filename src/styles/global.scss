@@ -1,0 +1,9 @@
+@use 'font';
+@use 'colors';
+@use 'header';
+@use 'filters';
+
+body {
+    font-family: "mostra-nuova", sans-serif;
+    background-color: colors.$darkPurple;
+}
