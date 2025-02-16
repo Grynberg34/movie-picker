@@ -1,0 +1,24 @@
+@use 'colors';
+
+.button {
+    display: block;
+    margin-top: 4vh;
+    margin-bottom: 6vh;
+    padding: 0.5vw;
+    width: 72%;
+    font-family: "mostra-nuova", sans-serif;
+    font-weight: 700;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0.4vw solid colors.$lightYellow;
+    outline: none;
+    font-size: 1.5vw;
+    background-color: colors.$lightYellow;
+    color: colors.$purple;
+    cursor: pointer;
+
+    &:hover {
+        background-color: colors.$darkPurple;
+        color: colors.$lightYellow;
+    }
+}

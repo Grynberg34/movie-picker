@@ -4,6 +4,7 @@ import genres from "../../filters/genres";
 
 const initialState = {
     activeFilter: 1,
+    selected: [],
     filters: [
         {
             id: 1,
@@ -90,6 +91,17 @@ const filtersReducer = (state = initialState, action) => {
                     filter.id === 5 ? { ...filter, filtered: action.payload } : filter
                 )
             }; 
+        case 'ADD_TO_SELECTED':
+            return {
+                ...state,
+                selected: [...state.selected, action.payload]
+            };
+            
+        case 'DELETE_FROM_SELECTED':
+            return {
+                ...state,
+                selected: state.selected.filter(item => item.name !== action.payload)
+            };
 
         default:
         return state;

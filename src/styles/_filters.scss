@@ -2,13 +2,78 @@
 
 .filters {
 
+    .filters__selected {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+
+        .filters__selected__list {
+            margin-bottom: 2vh;
+            padding-left: 0;
+            list-style: none;
+
+            .filters__selected__list__item {
+                display: inline-flex;
+                align-items: center;
+                margin-right: 0.75vw;
+                margin-bottom: 2vh;
+                padding: 0.25vw;
+                padding-left: 0.5vw;
+                width: fit-content;
+                background-color: colors.$lightYellow;
+                color: colors.$purple;
+                font-size: 1vw;
+                font-weight: 600;
+
+                .filters__selected__list__item__icon {
+                    display: flex;
+                    align-items: center;
+                    padding: 0.2vw;
+                    align-items: center;
+                    background-color: colors.$purple;
+                    font-size: 0.5vw;
+                    color: colors.$lightYellow;
+                    border-radius: 1vw;
+                    margin-left: 0.5vw;
+                    margin-right: 0.5vw;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: colors.$lightPurple;
+                    }
+                }
+            }
+        }
+    }
+
     .filters__box {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        height: 60vh;
         width: 70%;
         border: 0.4vw solid colors.$lightPurple;
+        transition: height 0.3s ease-in-out;
+        overflow: hidden;
+
+        .filters__box__toggle {
+            display: block;
+            margin-left: auto;
+            height: 5vh;
+            width: 3vw;
+            background-color: colors.$lightPurple;
+            font-size: 2vw;
+            text-align: center;
+            color: colors.$purple;
+            border: none;
+            outline: none;
+            cursor: pointer;
+
+            &:hover {
+                background-color: colors.$purple;
+                color: colors.$lightPurple;
+            }
+        }
 
         .filters__box__select {
             display: block;
@@ -64,7 +129,7 @@
                 margin-right: 2vw;
                 margin-left: 1vw;
                 list-style: none;
-                max-height: 40vh;
+                max-height: 34vh;
                 overflow-y: auto;
 
                 .filters__box__items__list__item {
@@ -99,6 +164,15 @@
             }
             
         }
+
+    }
+
+    .filters__box.maximized {
+        height: 60vh;
+    }
+    
+    .filters__box.minimized {
+        height: 5vh;
     }
 
 }

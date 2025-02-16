@@ -1,5 +1,6 @@
 import Header from '../components/Header/Header';
 import Filters from '../components/Filters/Filters';
+import Button from '../components/Button/Button';
 import Grid from '@mui/material/Grid2';
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
 
           <Header />
           <Filters />
+          <Button />
 
         </Grid>
 
