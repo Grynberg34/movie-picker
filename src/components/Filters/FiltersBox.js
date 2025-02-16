@@ -1,4 +1,5 @@
 import FiltersSelection from './FiltersSelection';
+import FiltersItems from './FiltersItems';
 
 function FilterBox() {
 
@@ -6,6 +7,8 @@ function FilterBox() {
         <div className="filters__box">
 
             <FiltersSelection></FiltersSelection>
+
+            <FiltersItems></FiltersItems>
 
         </div>
     )

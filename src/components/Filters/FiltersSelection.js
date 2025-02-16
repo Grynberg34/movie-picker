@@ -17,7 +17,7 @@ function FilterSelection() {
 
             <Grid container spacing={2}>
 
-                <Grid size={{ xs: 12, sm: 2 }} onClick={() => dispatch(prevFilter())}>
+                <Grid size={{ xs: 12, sm: 2 }} onClick={() => dispatch(prevFilter(activeFilter.id))}>
 
                     <ArrowLeftIcon className="filters__box__select__icon" />
 
@@ -27,7 +27,7 @@ function FilterSelection() {
                     <h1 className="filters__box__select__title">{activeFilter.name}</h1>
                 </Grid>
 
-                <Grid size={{ xs: 12, sm: 2 }} onClick={() => dispatch(nextFilter())}>
+                <Grid size={{ xs: 12, sm: 2 }} onClick={() => dispatch(nextFilter(activeFilter.id))}>
 
                     <ArrowRightIcon className="filters__box__select__icon icon--right" />
 

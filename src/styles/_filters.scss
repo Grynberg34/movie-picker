@@ -39,6 +39,66 @@
                 text-transform: uppercase;
             }
         }
+
+        .filters__box__items {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 2vh;
+            text-align: center;
+
+            .filters__box__items__search {
+                font-size: 1vw;
+                margin-bottom: 2vh;
+                text-align: center;
+                width: 50%;
+                border: none;
+
+                &:focus {
+                    outline: 0;
+                    border: none;
+                }
+            }
+
+            .filters__box__items__list {
+                margin-right: 2vw;
+                margin-left: 1vw;
+                list-style: none;
+                max-height: 40vh;
+                overflow-y: auto;
+
+                .filters__box__items__list__item {
+                    margin-bottom: 2vh;
+                    font-size: 1.25vw;
+                    color: colors.$lightPurple;
+                    font-weight: 500;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: colors.$white;
+                    }
+
+                }
+            }
+
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+              
+            ::-webkit-scrollbar-track {
+                background: colors.$white;
+            }
+            
+            ::-webkit-scrollbar-thumb {
+                background: colors.$lightPurple;
+                border-radius: 0;
+            }
+              
+            ::-webkit-scrollbar-thumb:hover {
+                background: colors.$purple;
+            }
+            
+        }
     }
 
 }
