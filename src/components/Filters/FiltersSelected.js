@@ -1,4 +1,3 @@
-"use client";
 import { useSelector, useDispatch } from 'react-redux';
 import { DeleteFromSelected } from "../../store/actions/filterActions";
 import CloseIcon from '@mui/icons-material/Close';

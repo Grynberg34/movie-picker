@@ -1,6 +1,6 @@
 import movies from '../../app/api/movies';
 
-export const nextFilter = (filterId) => {
+export const NextFilter = (filterId) => {
     return (dispatch) => {
 
         dispatch({ type: 'NEXT_FILTER' });
@@ -13,7 +13,7 @@ export const nextFilter = (filterId) => {
     };
 };
 
-export const prevFilter = (filterId) => {
+export const PrevFilter = (filterId) => {
     return (dispatch) => {
         dispatch({ type: 'PREV_FILTER' });
 
@@ -73,10 +73,13 @@ export const SearchFilter = (filter, searchQuery) => async dispatch => {
 
 };
 
-export const AddToSelected = (item) => ({
-    type: 'ADD_TO_SELECTED',
-    payload: item
-});
+export const AddToSelected = (item, filterId) => {
+    return (dispatch) => {
+        const updatedItem = { ...item, filterId };
+
+        dispatch({ type: 'ADD_TO_SELECTED', payload: updatedItem });
+    };
+};
 
 export const DeleteFromSelected = (name) => ({
     type: 'DELETE_FROM_SELECTED',

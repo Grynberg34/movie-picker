@@ -1,4 +1,3 @@
-"use client";
 import { useSelector, useDispatch } from 'react-redux';
 import { useState, useEffect } from 'react';
 import { selectActiveFilter } from '../../selectors/selectors';
@@ -25,15 +24,21 @@ function FilterItems() {
 
     const handleItemClick = (item) => {
 
-        if (!selectedFilters.some(selected => selected.name === item.name)) {
-            dispatch(AddToSelected(item));
+        if (selectedFilters.some(selected => selected.name === item.name)) {
+            return;
         }
+    
+        if (activeFilter.id === 3 && selectedFilters.some(selected => selected.filterId === 3)) {
+            return;
+        }
+    
+        dispatch(AddToSelected(item, activeFilter.id));
     };
 
     return (
         <div className="filters__box__items">
 
-            <input type="text" className="filters__box__items__search"  value={searchQuery} onChange={handleSearchChange}  />
+            <input type="text" className="filters__box__items__search" placeholder='search'  value={searchQuery} onChange={handleSearchChange}  />
 
             {
                 (activeFilter.filtered.length < 1 && activeFilter.all !== null && searchQuery.length < 1) ?

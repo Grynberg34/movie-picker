@@ -1,0 +1,191 @@
+@use 'colors';
+
+.movies {
+
+    .movies__header {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 3vh;
+        width: 70%;
+
+        .movies__header__title {
+            margin-top: 0.5vh;
+            margin-bottom: 0;
+            font-size: 2vw;
+            font-weight: 400;
+            text-align: center;
+            color: colors.$lightPurple;
+
+            .movies__header__title__number {
+                font-weight: 700;
+                color: colors.$lightYellow;
+            }
+        }
+
+        .movies__header__icon {
+            display: block;
+            font-size: 3vw;
+            color: colors.$lightYellow;
+            cursor: pointer;
+        }
+
+        .icon--right {
+            margin-left: auto;
+        }
+    }
+
+    .movies__movie {
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2vh;
+        width: 60%;
+        height: 52vh;
+        border: 0.4vw solid colors.$lightPurple;
+        background-color: colors.$lightPurple;
+        background-size: cover;
+        overflow-y: auto;
+        overflow-x: hidden;
+        cursor: pointer;
+
+        .movies__movie__poster {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .movies__movie__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(colors.$darkPurple, 0.85);
+            text-align: center;
+            overflow-y: auto;
+            overflow-x: hidden;
+
+            .movies__movie__overlay__title {
+                font-size: 1.5rem;
+                font-weight: bold;
+                padding: 10px;
+            }
+    
+            .movies__movie__overlay__close {
+                position: absolute;
+                top: 2.5%;
+                right: 10%;
+                font-size: 2.5vw;
+                font-weight: 700;
+                color: colors.$lightPurple;
+                cursor: pointer;
+    
+                &:hover {
+                    color: colors.$lightYellow;
+                }
+            }
+    
+            .movies__movie__overlay__info {
+                margin-top: 12vh;
+                margin-bottom: 4vh;
+                padding: 3vw;
+                padding-top: 0;
+
+                .movies__movie__overlay__info__title {
+                    margin-bottom: 2vh;
+                    font-size: 1.5vw;
+                    color: colors.$lightYellow;
+                    font-weight: 700;
+                }
+
+                .movies__movie__overlay__info__subtitle {
+                    margin-bottom: 4vh;
+                    font-size: 1vw;
+                    color: colors.$lightYellow;
+                    font-weight: 700;
+                }
+
+                .movies__movie__overlay__info__category {
+                    margin-bottom: 0.5vh;
+                    margin-top: 3vh;
+                    font-size: 1vw;
+                    color: colors.$lightYellow;
+                    font-weight: 700;
+                }
+
+                .movies__movie__overlay__info__item {
+                    margin-bottom: 1vh;
+                    margin-top: 0;
+                    font-size: 0.75vw;
+                    line-height: 2;
+                    color: colors.$grey;
+                    font-weight: 400;
+                }
+
+                .movies__movie__overlay__info__gallery {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    padding-left: 2vw;
+                    padding-right: 2vw;
+                    overflow: hidden;
+
+                    .movies__movie__overlay__info__gallery__img {
+                        width: 30%;
+                        padding: 0.5vw;
+
+                    }
+                }
+            }
+        }
+        
+
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+      
+    ::-webkit-scrollbar-track {
+        background: colors.$purple;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: colors.$lightYellow;
+        border-radius: 0;
+    }
+      
+    ::-webkit-scrollbar-thumb:hover {
+        background: colors.$lightPurple;
+    }
+    
+    .movies__text {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 3vh;
+        margin-top: 0;
+        width: 70%;
+        font-size: 1vw;
+        text-align: center;
+        font-style: italic;
+        font-weight: 400;
+        color: colors.$grey;
+    }
+
+    .movies__link {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        width: 70%;
+        font-size: 1vw;
+        text-align: center;
+        font-weight: 400;
+        color: colors.$lightYellow;
+        text-decoration: none;
+
+        &:hover {
+            color: colors.$grey;
+        }
+    }
+}

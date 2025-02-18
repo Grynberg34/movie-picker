@@ -1,9 +1,6 @@
-"use client";
 import { useState } from 'react';
 import FiltersSelection from './FiltersSelection';
 import FiltersItems from './FiltersItems';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 
 function FilterBox() {
     const [isMinimized, setIsMinimized] = useState(false);
