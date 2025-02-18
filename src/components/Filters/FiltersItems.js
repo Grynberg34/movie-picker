@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { selectActiveFilter } from '../../selectors/selectors';
 import { SearchFilter, AddToSelected } from "../../store/actions/filterActions";
 
-function FilterItems() {
+function FiltersItems() {
     const activeFilter = useSelector(selectActiveFilter);
 
     const selectedFilters = useSelector(state => state.filters.selected);
@@ -59,4 +59,4 @@ function FilterItems() {
 
 }
 
-export default FilterItems
+export default FiltersItems
