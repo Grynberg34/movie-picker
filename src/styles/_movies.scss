@@ -59,16 +59,12 @@
             position: absolute;
             top: 0;
             left: 0;
+            width: 100%;
+            height: 100%;
             background: rgba(colors.$darkPurple, 0.85);
             text-align: center;
             overflow-y: auto;
             overflow-x: hidden;
-
-            .movies__movie__overlay__title {
-                font-size: 1.5rem;
-                font-weight: bold;
-                padding: 10px;
-            }
     
             .movies__movie__overlay__close {
                 position: absolute;
@@ -142,7 +138,7 @@
     }
 
     ::-webkit-scrollbar {
-        width: 10px;
+        width: 0.5vw;
     }
       
     ::-webkit-scrollbar-track {
@@ -188,4 +184,112 @@
             color: colors.$grey;
         }
     }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .movies {
+
+        .movies__header {
+            margin-bottom: 3vh;
+            width: 80%;
+    
+            .movies__header__title {
+                margin-top: 0.5vh;
+                margin-bottom: 0;
+                font-size: 8vw;
+            }
+    
+            .movies__header__icon {
+                font-size: 12vw;
+            }
+    
+            .icon--right {
+                margin-left: auto;
+            }
+        }
+    
+        .movies__movie {
+            margin-bottom: 2vh;
+            width: 80%;
+            height: 53vh;
+            border: 1vw solid colors.$lightPurple;
+    
+            .movies__movie__poster {
+                width: 100%;
+            }
+    
+            .movies__movie__overlay {
+        
+                .movies__movie__overlay__close {
+                    top: 2.5%;
+                    right: 12.5%;
+                    font-size: 10vw;
+                }
+        
+                .movies__movie__overlay__info {
+                    margin-top: 8vh;
+                    margin-bottom: 4vh;
+                    padding: 10vw;
+                    padding-top: 0;
+    
+                    .movies__movie__overlay__info__title {
+                        margin-bottom: 2vh;
+                        font-size: 6.5vw;
+                    }
+    
+                    .movies__movie__overlay__info__subtitle {
+                        margin-bottom: 4vh;
+                        font-size: 5vw;
+                    }
+    
+                    .movies__movie__overlay__info__category {
+                        margin-bottom: 0.5vh;
+                        margin-top: 3vh;
+                        font-size: 4vw;
+                    }
+    
+                    .movies__movie__overlay__info__item {
+                        margin-bottom: 1vh;
+                        margin-top: 0;
+                        font-size: 3vw;
+                        line-height: 2;
+                    }
+    
+                    .movies__movie__overlay__info__gallery {
+                        padding-left: 2vw;
+                        padding-right: 2vw;
+    
+                        .movies__movie__overlay__info__gallery__img {
+                            width: 25%;
+                            padding: 1vw;
+    
+                        }
+                    }
+                }
+            }
+            
+    
+        }
+    
+        ::-webkit-scrollbar {
+            width: 2vw;
+        }
+        
+        .movies__text {
+            margin-bottom: 3vh;
+            margin-top: 0;
+            width: 50%;
+            line-height: 1.5;
+            font-size: 3.5vw;
+        }
+    
+        .movies__link {
+            margin-top: 4vh;
+            margin-bottom: 8vh;
+            width: 70%;
+            font-size: 6vw;
+        }
+    }
+
 }

@@ -3,7 +3,7 @@ import Provider from "@/store/provider"; // Import your Provider component
 
 export const metadata = {
   title: "Movie Picker",
-  description: "Find a film to watch today",
+  description: "Pick a film to watch today",
 };
 
 export default function RootLayout({ children }) {
