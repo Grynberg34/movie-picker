@@ -7,7 +7,7 @@
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 3vh;
-        width: 70%;
+        width: 65%;
 
         .movies__header__title {
             margin-top: 0.5vh;
@@ -41,8 +41,8 @@
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 2vh;
-        width: 60%;
-        height: 52vh;
+        width: 38vh;
+        height: 56vh;
         border: 0.4vw solid colors.$lightPurple;
         background-color: colors.$lightPurple;
         background-size: cover;
@@ -210,9 +210,9 @@
         }
     
         .movies__movie {
-            margin-bottom: 2vh;
-            width: 80%;
-            height: 53vh;
+            margin-bottom: 3vh;
+            width: 36vh;
+            height: 54vh;
             border: 1vw solid colors.$lightPurple;
     
             .movies__movie__poster {
