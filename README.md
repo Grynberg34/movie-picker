@@ -2,6 +2,9 @@
 
 Movie Picker is a Next.js web application that helps users discover personalized movie recommendations. Using React, Redux, and Sass, the app integrates with [The Movie Database (TMDb)](https://www.themoviedb.org/) to provide tailored movie selections based on user-defined filters.
 
+## Live Demo
+Check out the live version of Movie Picker: https://movie-picker-pbjkm.ondigitalocean.app/
+
 ## Features
 - **Filter Selection**: Users can filter movies by genres, decades, country, cast and crew, and production companies.
 - **Movie Picks**: The app generates a curated list of 10 movies based on selected filters.
