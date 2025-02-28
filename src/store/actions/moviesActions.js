@@ -40,7 +40,7 @@ export const PickMovies = (filters) => {
         try {
 
             const response = await movies.get(query);
-            const movieResults = response.data.results.slice(0, 10); 
+            const movieResults = response.data.results;
 
             if (movieResults.length === 0) {
                 dispatch({ type: 'SHOW_MODAL', payload: 'No movies found for the selected filters' });

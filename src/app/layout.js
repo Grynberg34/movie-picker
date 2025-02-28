@@ -1,5 +1,5 @@
 import "../styles/global.scss";
-import Provider from "@/store/provider"; // Import your Provider component
+import Provider from "@/store/provider";
 
 export const metadata = {
   title: "Movie Picker",
