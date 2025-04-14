@@ -29,6 +29,23 @@ function MovieBox() {
 
                         <h3 className="movies__movie__overlay__info__item overview">{activeMovie.overview}</h3>        
 
+                        { activeMovie.providers[country]?.flatrate !== undefined?
+                            <div>
+                                <h2 className="movies__movie__overlay__info__category">Streaming ({country})</h2>
+
+                                <div className="movies__movie__overlay__info__gallery">
+
+                                    { activeMovie.providers[country].flatrate.map( (provider, index) =>
+                                        <img key={index} className="movies__movie__overlay__info__gallery__img" src={`https://image.tmdb.org/t/p/original/${provider.logo_path}`} alt="" />
+                                    )}
+
+                                </div>
+
+                            </div>
+                            :null
+
+                        }
+                        
                         <h2 className="movies__movie__overlay__info__category">Release Date</h2>
                         <h3 className="movies__movie__overlay__info__item">{activeMovie.release_date.substring(0,4)}</h3>  
 
@@ -49,22 +66,6 @@ function MovieBox() {
                             )}
                         </div>
                         
-                        { activeMovie.providers[country]?.flatrate !== undefined?
-                            <div>
-                                <h2 className="movies__movie__overlay__info__category">Streaming ({country})</h2>
-
-                                <div className="movies__movie__overlay__info__gallery">
-
-                                    { activeMovie.providers[country].flatrate.map( (provider, index) =>
-                                        <img key={index} className="movies__movie__overlay__info__gallery__img" src={`https://image.tmdb.org/t/p/original/${provider.logo_path}`} alt="" />
-                                    )}
-
-                                </div>
-
-                            </div>
-                            :null
-
-                        }
 
 
                     </div>
